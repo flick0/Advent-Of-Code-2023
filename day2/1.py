@@ -1,4 +1,4 @@
-with open("3.txt") as f:
+with open("input") as f:
     raw = f.read()
 
 games = []
@@ -16,7 +16,6 @@ def check_game(game):
         if actual_game[color] < game[color]:
             return False
     return True
-
 
 for line in raw.split("\n"):
     game_index = int(line.split(":")[0].split(" ")[1].strip())

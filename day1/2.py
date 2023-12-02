@@ -21,8 +21,7 @@ def find_num(buf:str):
             return k
     return None
     
-
-with open("2.txt") as f:
+with open("input") as f:
     raw = f.read()
     for line in raw.split("\n"):
         buf = ""
@@ -34,6 +33,5 @@ with open("2.txt") as f:
         digits = digits[0] + digits[-1]
         print(digits)
         s += int(digits)
-
-print("==")
+        
 print(s)

@@ -1,4 +1,4 @@
-with open("3.txt") as f:
+with open("input") as f:
     raw = f.read()
 
 games = []
@@ -17,10 +17,6 @@ def check_game(game):
             return False
     return True
 
-def power(game):
-    return game["red"] * game["green"] * game["blue"]
-
-
 for line in raw.split("\n"):
     game_index = int(line.split(":")[0].split(" ")[1].strip())
 
@@ -37,7 +33,7 @@ for line in raw.split("\n"):
         if game[color] < (num:=int(number)):
             game[color] = num
     
-    s += power(game)
+    s += game["red"] * game["green"] * game["blue"]
        
 
 print(s)
